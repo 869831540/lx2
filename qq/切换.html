@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span:first-child{
+				display: block;
+				width: 100px;
+				height: 70px;
+				background-image: url(img/tittle.png);
+				background-repeat: no-repeat;
+				background-position-x:0;
+				background-position-y:10px;
+				border:1px solid red;
+			}
+
+            span:nth-child(2){
+				display: block;
+				width: 100px;
+				height: 70px;
+				background-image: url(img/tittle.png);
+				background-repeat: no-repeat;
+				background-position-x:15.5%;
+				background-position-y:10px;
+				border:1px solid red;
+			}			
+		</style>
+	</head>
+	<body>
+		<span></span>
+		<span></span>
+		
+	<script>
+		var spans=document.querySelectorAll("span");
+        spans[0].onmouseenter=function(){
+        	this.style.backgroundPositionY="-61px";
+        }
+        spans[0].onmouseleave=function(){
+        	this.style.backgroundPositionY="10px";
+        }		
+	</script>	
+	</body>
+	
+</html>
