@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <script type="text/javascript" src="js/hammer.js" ></script>
+	</head>
+	<style type="text/css">
+		.box{
+			width: 400px;
+			height: 500px;
+			background: skyblue;
+			
+		}
+	</style>
+	<body>
+		<div class="box" id="box"></div>
+		<script type="text/javascript">
+//			var s =new Set([1,2,3,3,4,5,5,6]);
+//			s.add(0)
+//			var arr = [...s];
+//			var arr1 = Array.from(s)
+//			
+//			console.log(arr)
+//			console.log(arr1)
+
+//        var div = document.querySelector('#box');
+//        
+//        div.addEventListener('touchstart',function(e){
+//        	div.innerHTML=e.touches.length;
+//        })
+//        div.addEventListener('touchmove',function(e){
+//        	div.innerHTML=e.targetTouches.length;
+//        })
+//        div.addEventListener('touchend',function(e){
+//        	console.log(e.changedTouches[0].pageX);
+//        })
+
+
+           var div = document.getElementById('box');
+           div.addEventListener('touchstart',function(ev){
+           	  ev.preventDefault(); //阻止默认行为
+           })
+           div.addEventListener('touchend',function(e){
+           	 //this.style.display = 'none';
+           })
+           var hins = new Hammer(div);
+           hins.get('panleft',function(){
+           	console.log('swipe left');
+           })
+           hins.on('panright',function(){
+           	console.log('swipe right');
+           })
+           var sc=1;
+           
+           hins.on('panchin',function(){
+           	sc-=0.03;
+           	if(sc<3){
+           		sc=0.3
+           	}
+           	div.style.transform="scale("+sc+")";
+           })
+           hins.on('panchout',function(){
+           	sc+=0.03;
+           	if(sc>3){
+           		sc=3
+           	}
+           	div.style.transform="scale("+sc+")";
+           })
+           
+           
+		</script>
+	</body>
+</html>
