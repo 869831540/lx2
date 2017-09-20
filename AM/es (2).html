@@ -58,14 +58,14 @@
            })
            var sc=1;
            
-           hins.on('panchin',function(){
+           hins.on('pinchin',function(){
            	sc-=0.03;
            	if(sc<3){
            		sc=0.3
            	}
            	div.style.webkitTransform="scale("+sc+")";
            })
-           hins.on('panchout',function(){
+           hins.on('pinchout',function(){
            	sc+=0.03;
            	if(sc>3){
            		sc=3
