@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/angular.js" ></script>
+		<script src="js/angular-ui-router.js" ></script>
+		<script>
+			 var app = angular.module("app",["ui.router"]);
+			 app.config(function($stateProvider,$urlRouterProvider){
+			 	 $urlRouterProvider.otherwise('/one')
+			 	  $stateProvider
+			 	  .state({
+			 	  	 name:'one',
+			 	  	 url:"/one",
+			 	  	 template:"<h1>fucky</h1>"
+			 	  })
+			 	   .state({
+			 	  	 name:'two',
+			 	  	 url:"/two",
+			 	  	 templateUrl:"./views/neirong.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'three',
+			 	  	 url:"/three",
+			 	  	 templateUrl:"./views/dibu.html"
+			 	  })
+			 })
+			app.directive("myheader",function(){
+				return {
+					restrict:"E",
+					templateUrl:"./views/myheader.html"
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<myheader></myheader>
+	</body>
+</html>

@@ -34,7 +34,7 @@
           	div.innerHTML=e.targetTouches.length;
           })
           div.addEventListener('touchend',function(e){
-          	console.log(e.changedTouches['触摸点有：'0].pageX);
+          	console.log(e.changedTouches[0].pageX);
           })
 
 
@@ -42,10 +42,13 @@
            div.addEventListener('touchstart',function(ev){
            	  ev.preventDefault(); //阻止默认行为
            })
-
+           div.addEventListener('touchend',function(e){
+           	 //this.style.display = 'none';
+           })
+           
            
            var hins = new Hammer(div);
-           hins.get('pinch').set({enable:true});
+           hins.get('pinch').set({enable:true})
            hins.on('panleft',function(){
            	console.log('swipe left');
            })
