@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	     <script type="text/javascript" src="js/hammer.js" ></script>
+	</head>
+	<style type="text/css">
+
+			html{
+				height: 100%;
+			}
+			body{
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				position: relative;
+			}
+			.box{
+				height: 100%;
+				}
+			ul{
+				width: 400%;
+				height: 400px;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				position: absolute;
+			}
+			ul li:nth-child(1){
+				width: 100%;
+				background-color: #8A2BE2;
+				height: 400px;
+			}
+			
+			ul li:nth-child(2){
+				width: 100%;
+				background-color: aqua;
+				height: 400px;
+			}
+			ul li:nth-child(3){
+				width: 100%;
+				background-color: chartreuse;
+				height: 400px;
+			}
+			ul li:nth-child(4){
+				width: 100%;
+				background-color: fuchsia;
+				height: 400px;
+			}
+		
+	</style>
+	<body>
+		<div class="box">
+			<ul class="list" id="list">
+				<li>1111</li>
+				<li>2222</li>
+				<li>3333</li>
+				<li>4444</li> 	
+			</ul>
+			
+		</div>
+		<script type="text/javascript">
+			var  n =0
+			var list = document.getElementById('list')
+			var lis =list.getElementsByTagName('li')
+
+			function getStyle(obj,attr){
+				return getComputedStyle(obj,null)[attr];
+			}
+			
+			var w=parseInt(getStyle(lis[0],'width'));
+			list.addEventListener('touchstart',function(ev){
+				ev.preventDefault();
+				var ex = ev.changedTouches[0].pageX;
+				var oLeft = list.offsetLeft;
+				list.addEventListener('touchmove',function(ev){
+					var dis = ev.changedTouches[0].pageX-ex;
+					list.style.left=(oLeft+dis)+'px';
+				})
+				list.addEventListener('touchend',function(){
+					var n=Math.round(list.offsetLeft/w);
+					if(-n==lis.length){
+						n=1-lis.length
+					}
+					if(n>0){
+						n=0
+					}
+					list.style.left=n*w+'px';
+				})
+			})
+
+		</script>
+	</body>
+</html>
