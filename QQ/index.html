@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript">
+			document.documentElement.style.fontSize=innerWidth/25+'px';
+		</script>
+		<link rel="stylesheet" href="css/man.css" />
+		<script src="js/angular.js" ></script>
+		<script src="js/angular-ui-router.js" ></script>
+		<script type="text/javascript" src="js/shijian.js" ></script>
+
+		<script>
+			 var app = angular.module("app",["ui.router"]);
+			 app.config(function($stateProvider,$urlRouterProvider){
+			 	 $urlRouterProvider.otherwise('/one')
+			 	  $stateProvider
+			 	  .state({
+			 	  	 name:'one',
+			 	  	 url:"/one",
+			 	  	 templateUrl:"./views/toubu.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'two',
+			 	  	 url:"/two",
+			 	  	 templateUrl:"./views/neirong.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'three',
+			 	  	 url:"/three",
+			 	  	 templateUrl:"./views/dibu.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'dong',
+			 	  	 url:"/dong",
+			 	  	 templateUrl:"./views/tongtai.html"
+			 	  })
+			 })
+
+		</script>
+	</head>
+	<body>
+		
+		
+<div class="box">
+   
+	    <div class="con">
+	
+	    	<ui-view></ui-view>
+	    </div>
+	    
+	    
+	    <div class="com">
+	    	<div class="lefts">
+	    		<i class="iconfont">&#xe672;</i><br/>
+	    		<i class="iconfont">&#xe671;</i><br/>
+	    		<i class="iconfont">&#xe68e;</i><br/>
+	    	</div>
+	    	
+	    	<div id="show"></div>
+	    	
+	    	<div class="rights">
+	    		<i class="iconfont">&#xe644;</i><br/>
+	    		<i class="iconfont">&#xe613;</i><br/>
+	    		<i class="iconfont">100%</i><br/>
+	    		<i class="iconfont">&#xe604;</i><br/>
+	    	</div>
+	    </div>
+		
+		<div class="footer">
+			<ul>
+				<li><i class="iconfont">&#xe680;</i><br/><a href="#!/one">消息</a></li>
+				<li><i class="iconfont">&#xe8c5;</i><br/><a href="#!/two">联系人</a></li>
+				<li><i class="iconfont">&#xe616;</i><br/><a href="#!/three">看点</a></li>
+				<li><i class="iconfont">&#xe605;</i><br/><a href="#!/dong">动态</a></li>
+			</ul>
+			
+			
+		</div>
+		
+</div>
+	</body>
+</html>

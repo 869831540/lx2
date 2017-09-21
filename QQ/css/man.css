@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+html {
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-top: 3.3333333333rem;
+  padding-bottom: 3rem;
+  overflow: hidden; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  box-sizing: border-box; }
+
+.footer ul {
+  width: 100%;
+  height: 3rem;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+  position: absolute;
+  padding: 0;
+  bottom: 0; }
+
+.footer ul li {
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  margin-top: 3px; }
+
+.footer ul li a {
+  font-size: 10px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block; }
+
+.footer ul li i {
+  margin-top: 2px; }
+
+.com {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  top: 0;
+  border: 1px solid red; }
+  .com div {
+    display: flex;
+    width: 33.3%; }
+    .com div:nth-child(2) i {
+      display: block;
+      margin: 0 auto; }
+    .com div:nth-child(3) {
+      display: flex;
+      justify-content: flex-end; }
+  .com .lefts i {
+    font-size: 8px; }
+    .com .lefts i:first-child {
+      font-size: 5px; }
+
+/*# sourceMappingURL=man.css.map */
