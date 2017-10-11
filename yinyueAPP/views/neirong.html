@@ -1,0 +1,180 @@
+<div class="neirong_sousuo">
+				<a >更多</a>
+				<a >我的音乐</a>
+				<svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-yinpin-copy"></use>
+          	    </svg>
+</div>
+
+<div class="neirong_two">
+	<ul>
+		<li>    <a >
+				    <svg class="icon" aria-hidden="true">
+	                     <use xlink:href="#icon-yinle1"></use>
+	                </svg>
+				</a>
+                <a>本地音乐</a>
+                <a>134></a>
+		</li>
+		<li>	<a >
+				    <svg class="icon" aria-hidden="true">
+	                     <use xlink:href="#icon-wodexingqiuzuijinbofang"></use>
+	                </svg>
+				</a>
+                <a>最近播放</a>
+                <a>100></a>
+		</li>
+		<li>    <a >
+					<svg class="icon" aria-hidden="true">
+	                     <use xlink:href="#icon-diantai"></use>
+	                </svg>
+				</a>
+                <a>我的电台</a>
+                <a>32></a>
+		</li>
+		<li>	<a >
+					<svg class="icon" aria-hidden="true">
+	                     <use xlink:href="#icon-wodeshoucang"></use>
+	                </svg>
+				</a>
+                <a class="qqq">我的收藏</a>
+                <a class="qqq">32></a>
+		</li>
+	</ul>
+</div>
+
+<div class="neirong_collect">
+	 <div class="smitile">
+	 	<a class="smtitle_a">我创建的单歌</a>
+	 	<ul>
+	 		<li><img src="./img/k1.jpg"/><p>我喜欢的音乐</p><p>首</p></li>
+	 		<li><img src="./img/IMG_0772.JPG"/><p>我喜欢的音乐</p><p>首</p></li>
+	 		<li><img src="./img/IMG_0774.JPG"/><p>我喜欢的音乐</p><p>首</p></li>
+	 		<li><img src="./img/IMG_0771.JPG"/><p>我喜欢的音乐</p><p>首</p></li>
+	 		<li><img src="./img/IMG_0775.JPG"/><p>我喜欢的音乐</p><p class="qqq">首</p></li>
+	 	</ul>
+	 </div>
+	 <div class="smitile">
+	 	<a class="smtitle_a">我收藏的单歌</a>
+	 	<ul>
+	 		<li><img src="./img/IMG_0768.JPG"/><p>我喜欢的音乐</p><p>50首</p></li>
+	 		<li><img src="./img/IMG_0770.JPG"/><p>我喜欢的音乐</p><p>50首</p></li>
+	 		<li><img src="./img/IMG_0773.JPG"/><p>我喜欢的音乐</p><p>50首</p></li>
+	 		<li><img src="./img/IMG_0776.JPG"/><p>我喜欢的音乐</p><p>50首</p></li>
+	 		<li><img src="./img/IMG_0777.JPG"/><p>我喜欢的音乐</p><p class="qqq">50首</p></li>
+	 	</ul>
+	 </div>
+</div>
+
+<div class="neirong_list">
+		<ul class="yiji">
+			<li><a class="inactive">最喜欢的单歌</a>
+				<ul style="display: none">
+					<li><img src="./img/k1.jpg"/><a  class="inactive active">最喜欢的单歌</a>
+						<ul>
+							<li><a href="./views/m/aaa.html">大壮-我们不一样</a></li>
+						</ul>
+					</li> 
+					
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+
+
+
+
+<script type="text/javascript">
+
+        function initMenu() {
+
+            //	$('.neirong_collect ul').hide();
+
+            //	$('.neirong_collect ul.smbody').show();
+
+            $('.neirong_collect div a').click(
+
+				function () {
+				
+				   $(this).parent().parent().find("a.smtitle_a");
+				
+				   var checkElement = $(this).next();
+				
+				   if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+				
+				       $('.neirong_collect ul:visible').slideDown('normal');
+				
+				       checkElement.slideUp('normal');
+				
+				       checkElement.prev();
+				
+				       return false;
+				
+				   }
+				
+				   if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+				
+				       $('.neirong_collect ul:visible').slideUp('normal');
+				
+				       checkElement.slideDown('normal');
+				
+				       checkElement.prev();
+				
+				       return false;
+				
+				   }
+				
+				}
+
+           );
+
+        }
+
+        $(document).ready(function () { initMenu(); });
+
+    </script>
+  
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.inactive').click(function(){
+			if($(this).siblings('ul').css('display')=='none'){
+				$(this).parent('li').siblings('li').removeClass('inactives');
+				$(this).addClass('inactives');
+				$(this).siblings('ul').slideDown(100).children('li');
+				if($(this).parents('li').siblings('li').children('ul').css('display')=='block'){
+					$(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
+					$(this).parents('li').siblings('li').children('ul').slideUp(100);
+				}
+			}else{
+				//控制自身变成+号
+				$(this).removeClass('inactives');
+				//控制自身菜单下子菜单隐藏
+				$(this).siblings('ul').slideUp(100);
+				//控制自身子菜单变成+号
+				$(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+				//控制自身菜单下子菜单隐藏
+				$(this).siblings('ul').children('li').children('ul').slideUp(100);
+				//控制同级菜单只保持一个是展开的（-号显示）
+				$(this).siblings('ul').children('li').children('a').removeClass('inactives');
+			}
+		})
+	});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

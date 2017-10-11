@@ -1,0 +1,886 @@
+$re:15;
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+    height: 100%;
+    ::-webkit-scrollbar  
+ {  
+    width: 1px;  
+    height: 1px;  
+    color: transparent;
+} 
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 45/$re+rem;
+    overflow: hidden;
+    background: #FFFAFA;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 50px;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.footer ul{
+    width:100%;
+    height: 45/$re+rem;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+}
+.footer ul li{
+    width:100%;
+    height:  50/$re+rem;
+    text-align: center;
+    margin-top: 3px;
+}
+.footer ul li a{
+    font-size: 10px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+    }
+    .footer ul li i{
+      margin-top:2px ;
+    
+    }
+    
+    
+ 
+   .toubu_sousuo{
+               width: 100%;
+               height: 35/$re+rem;
+               background: red;
+              
+               padding: 0;
+               margin: 0;
+               
+               display: flex;
+               justify-content:space-between;
+             
+               .icon {
+                   width:3em; height: 1.5em;
+                   vertical-align: -0.15em;
+                   fill: currentColor;
+                   overflow: hidden;
+                   margin-top: 7/$re+rem;
+                }
+                ::-webkit-input-placeholder{
+                        font-size: 10px;
+                        line-height: 25px;
+                        text-align: center;
+                     }
+                .box{
+                    width:265/$re+rem;
+                    height: 35/$re+rem;
+                    .txt{
+                        width: 200/$re+rem;
+                        height: 25/$re+rem;
+                        float: left;
+                        display: block;
+                        margin-top:5/$re+rem;   
+                        vertical-align:middle; 
+                        appearance: none;     
+                        border: 1px solid white;
+                        text-indent: 0.5em;
+                    }
+                    .search{
+                        width:50/$re+rem;
+                        height: 25/$re+rem;
+                        display: block;
+                        float: left;
+                        line-height:25/$re+rem ;
+                        text-decoration: none;
+                        color: red;
+                        background: white;
+                        border: 1px solid white;
+                        margin-top:5/$re+rem;  
+                        text-align: center;
+                    }
+                }
+        
+       }
+       
+       .toubu_music{
+           width: 100%;
+           height:100%;
+           display: none;
+           ul{
+               width: 100%;
+               height:339px;
+               list-style: none;
+               margin: 0;
+               padding: 0;
+               position: absolute;
+               overflow: hidden;
+               z-index: 500;
+               background: white;
+               overflow-y: auto;
+               li{
+                  width: 100%;
+                  height:35/$re+rem; 
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: space-around;
+                  p{
+                      width: 40%;
+                      height: 35/$re+rem;
+                      background: url(../img/sousuo.png) no-repeat 0 8px;
+                      background-size:20px 20px;
+                      line-height:35/$re+rem ;
+                      margin: 0;
+                      text-indent: 2em;
+                      white-space:nowrap;
+                       text-overflow:ellipsis;
+                      overflow: hidden;
+                  }
+                  
+                  strong{
+                      width: 20%;
+                      height: 35/$re+rem;
+                      line-height:35/$re+rem ;
+                      overflow: hidden;
+                      white-space: nowrap;
+                      text-overflow: ellipsis;
+                  }
+               }
+           }
+           
+       }
+    .videop{
+        width: 100%;
+        height: 50/$re+rem;
+        position: fixed;
+        bottom:45/$re+rem ;
+        box-sizing: border-box;
+        display: block;
+        video{
+            width: 100%;
+            height:50/$re+rem ;
+            display: block;
+        }
+        
+    }
+        
+   .toubu_one{
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+
+       
+       .navigation_one{
+           width: 100%;
+           height: 40/$re+rem;
+        
+           ul{
+               width: 100%;
+               height: 100%;
+               margin:0px;
+               padding: 0;
+               line-height:40/$re+rem ;
+               list-style: none;
+               display: flex;
+               justify-content: space-around;
+           }
+       }
+       
+     .recommend_one{
+         width: 100%;
+         height: 100%;
+         ul{
+             width: 100%;
+             height:100%;
+             border: 1px solid #CCCCCC;
+             list-style: none;
+             padding: 0;
+             margin: 0;
+             display: flex;
+             justify-content: space-around;
+            
+             
+             li{
+                 width: 100%;
+                 height: 100%;
+                 text-align: center;
+                 .icon {
+                       width: 3em; height: 3em;
+                       vertical-align: -0.15em;
+                       fill: currentColor;
+                       overflow: hidden;
+                       border-bottom: 1px solid red;
+                       border-radius:50%;
+                       margin-top: 8px;
+                       padding: 3px;
+                    }
+                    p{
+                        font-size: 10px;
+                      
+                    }
+                   
+             }
+         }
+     }
+     .single_one{
+         width: 100%;
+         height: 100%;
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+
+         h5{
+             width: 100%;
+             height:1.5rem;
+         }
+         .time_one{
+             width: 100%;
+             height: 100%;
+             ul{
+             width: 100%;
+             height: 100%;
+             list-style: none;
+             padding: 0;
+             margin: 0;
+             display: flex;
+             justify-content:space-between;
+             flex-wrap: wrap;
+               li{
+                 width: 32.5%;
+                 height: 100%;
+                 font-size: 12px;
+                
+                  
+                 
+                     img{
+                     width: 100%;
+                     height: 100%;
+                      }
+                      a{
+                          width:50/$re+rem;
+                          height: 15/$re+rem;
+                          display: block;
+                          transform: translate(5rem,-8.2rem);
+                          color: white;
+                      }
+                      span{
+                          width: 100px;
+                          display: block;
+                           text-align: center;
+                           padding: 0;
+                           margin:-5/$re+rem 5/$re+rem 5/$re+rem 10/$re+rem;
+                           display: flex;
+                           justify-content: center;
+                      }
+                }
+             }
+          }     
+     }
+     bottom:45/$re+rem ;
+       
+   }
+   
+   
+   .neirong_sousuo{
+        width: 100%;
+               height: 35/$re+rem;
+               background: red;
+               padding: 0;
+               margin: 0;
+               display: flex;
+               justify-content: space-between;
+               color: white;
+             a{
+                 color: white;
+                 line-height:35/$re+rem ;
+             }
+            a:nth-child(1){
+                width: 60/$re+rem;
+                text-align: center;
+            }
+               .icon {
+                   width:3em; height: 1.5em;
+                   vertical-align: -0.15em;
+                   fill: currentColor;
+                   overflow: hidden;
+                   margin-top: 7/$re+rem;
+                }    
+   }
+   .neirong_two{
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+       
+       ul{
+           width: 100%;
+           height: 100%;
+           list-style: none;
+           margin: 0;
+           padding: 0;
+           li{
+               width: 100%;
+               height: 50/$re+rem;
+               line-height: 60/$re+rem ;
+               .icon {
+                   width: 2em; height: 2em;
+                   vertical-align: -0.15em;
+                   fill: currentColor;
+                   overflow: hidden;
+                }
+                a:nth-child(1){
+                    width: 20%;
+                    height: 50/$re+rem;
+                    display: block;
+                     float: left;
+                     text-align: center;
+                     text-decoration: none;
+                }
+                a:nth-child(2){
+                    width: 70%;
+                    height: 50/$re+rem;
+                    display: block;
+                    float: left;
+                    line-height: 50/$re+rem ;
+                    text-decoration: none;
+                    border-bottom: 1px solid #CCCCCC;
+
+                }
+                a:nth-child(3){
+                    width: 10%;
+                    height: 50/$re+rem;
+                    display: block;
+                    float: left;
+                    color: #CDC9C9;
+                    line-height: 50/$re+rem ;
+                    text-decoration: none;
+                    border-bottom: 1px solid #CCCCCC;
+                    text-align: center;
+                    font-size: 10px;
+
+                }
+             .qqq{
+                 border-bottom: none!important;
+             }
+           }
+       }
+   }
+   
+   .neirong_collect{
+       width: 100%;
+       height: 100%;
+       .smitile{
+           width: 100%;
+           height: 100%;
+           margin: 0;
+           
+           .smtitle_a{
+               width: 100%;
+               height: 30/$re+rem;
+               line-height: 30/$re+rem;
+               background-color: #EBEBEB ;
+               display: block;
+               text-decoration: none;
+               text-indent: 1.5em;
+         
+           }
+            ul{
+                display: none;
+               width: 100%;
+               height: 100%;
+               list-style: none;
+               li{
+                  width: 100%;
+                  height:40/$re+rem ;
+                  margin-top: 3/$re+rem;
+                  img{
+                      height:40/$re+rem ;
+                      float: left;
+                      }
+                  p{
+                    padding: 0;
+                    margin: 0;
+                    float: left;
+                    margin-left:8/$re+rem;
+                    margin-top: 3/$re+rem;
+                    line-height: 40/$re+rem;
+                    }
+                   p:nth-last-of-type(1){
+                          color: #CDC9C9;
+                          font-size: 10px;
+                          float: right;
+                         
+                    }
+          
+                       
+               }
+            }         
+       }
+   }
+   .neirong_list{
+       width: 100%;
+       height: 100%;
+       .yiji{
+           width: 100%;
+           height: 100%;
+           list-style: none;
+           background: #EBEBEB ;
+           margin: 0;
+           padding: 0;
+           li{
+               width: 100%;
+               height: 30/$re+rem;
+               a{
+                   width: 100%;
+                   height: 30/$re+rem;
+                   line-height: 30/$re+rem;
+                   display: block;
+                   text-decoration: none;
+                   text-indent: 1.5em;
+                   
+               }
+               ul{
+                   width: 100%;
+                   height: 100%;
+                   list-style: none;
+                   background: transparent;
+                   margin: 0;
+                   padding:0;
+                   li{
+                       width: 100%;
+                       height:100% ;
+                       margin-top: 3/$re+rem;
+                       img{   
+                         height:40/$re+rem ;
+                         float: left;
+                         margin-left: 20px;
+                         }
+                       .active{
+                          height:40/$re+rem ;
+                       }   
+                        ul{
+                            width: 100%;
+                            height: 100%;
+                            display: none;
+                            li{
+                                width: 100%;
+                                height:35/$re+rem;
+                                background: salmon;
+                               
+                                a{
+                                    height:10/$re+rem ;
+                                    padding-top: 0;
+                                    color: white;
+                                }
+                            }
+                        } 
+                   }
+               }
+           }
+       }
+       
+   }
+   
+   
+  
+   
+      .tongtai_sousuo{
+        width: 100%;
+               height: 35/$re+rem;
+               background: red;
+               padding: 0;
+               margin: 0;
+               display: flex;
+               justify-content:center;
+             span{
+                 color: white;
+                 line-height:35/$re+rem ;
+             }
+ 
+   }
+
+    @font-face {
+      font-family: 'iconfont';
+      src: url('../fonts1/iconfont.eot');
+      src: url('../fonts1/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts1/iconfont.woff') format('woff'),
+      url('../fonts1/.ttf') format('truetype'),
+      url('../fonts1/iconfont.svg#iconfont') format('svg');
+    }   
+   .tongtai_four{
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       .account{
+           width: 100%;
+           height: 80/$re+rem;
+           border-bottom: 1px solid #CCCCCC;
+           span{
+               width: 100%;
+               height:40/$re+rem;
+               display: block;
+               text-align: center;
+               line-height:40/$re+rem ;
+           }
+          .btn{
+              width: 100%;
+              height: 40/$re+rem;
+              background: white;
+              color: black;
+              border:1px solid #CCCCCC;
+              border-radius: 0;
+              padding: 0;
+          }
+          .modal-content{
+              top: 166/$re+rem;
+          }
+           i{
+              width: 35px;
+              height: 35px;
+              display: block;
+              float: left;
+              
+              background:url(../img/sucai_tubiao.png) 197px -5px;
+           }
+           h4{
+               width:100px ;
+               height: 25px;
+               display: block;
+               float:left;
+               line-height: 35px;
+              
+           }
+          .inner-account{
+              width: 100%;
+              height: 265px; 
+              .code{
+                  width: 40%;
+                  height: 265px;
+                  float: left;
+                  .a{
+                    width: 100%;
+                    height: 20/$re+rem;
+                    margin: 20px 0 20px 0;
+                    text-align: center;
+                  }
+                  img{
+                      width: 100/$re+rem;
+                      height: 100/$re+rem;
+                      margin:  auto;
+                      display: block;
+                  }
+              }
+              form{
+                  width: 60%;
+                  height:265px;
+                  float: right;
+                  .message{
+                       width: 81%;
+                
+                     margin-left:17px;
+                     margin-right:20px;
+                                     
+                        p{
+                          width: 50%;
+                          text-align:right;
+                         float: right;
+                          margin-top:20px;
+                          margin-bottom:0 ;
+                         
+                      }
+                      input{
+                          width: 100%;
+                          height: 30/$re+rem;
+                          text-indent: 2em;
+                          margin: 0;
+                          padding: 0;
+                          margin-bottom:1px;
+                   
+                      }
+                      input:focus{
+                          outline:none;
+                          border: 2px solid #36A803;
+                      }
+                     .input_yh{
+                        background:url(../img/tc_login_yonghu.jpg)  no-repeat 0;
+                     }
+                     .input_mm{background:url(../img/tc_login_mima.jpg) no-repeat 0;
+                     }
+                     .input_yh:focus{background:url(../img/tc_login_yonghu2.jpg) no-repeat 0;
+                     }
+                     .input_mm:focus{background:url(../img/tc_login_mima2.jpg) no-repeat 0;
+                     }
+                     
+                  }
+                  dd{
+                      width:81%;
+                      margin-left: 17px;
+                      margin-right: 20px;
+                      a{
+                         margin-top:10px;
+                         margin-bottom:10px;
+                         display: block;
+                         font-size: 10px;
+                         
+                      }
+                  }
+                  .input{
+                          width:81%;
+                          margin-left: 17px;
+                          margin-right: 20px;
+                          .button{
+                              width: 100%;
+                              height: 30px;
+                              background: #36a803;
+                              font-weight: bold;
+                              color: #fff;
+                              border: none;
+                              margin-bottom:3px ;
+                          }
+                      }
+                      ul{
+                          width:100%;
+                          padding: 0;
+                          margin: 0;
+                          margin:0 auto;
+                          list-style: none;
+                          float: left;
+                          display: flex;
+                          justify-content: center;
+                          li{
+                            margin-left: 5px;
+                              .icon {
+                                   width: 1.5em; height: 1.5em;
+                                   vertical-align: -0.15em;
+                                   fill: currentColor;
+                                   overflow: hidden;
+                                }
+                          }
+                      }
+                
+              }
+          }
+          
+       }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       .data{
+           width: 100%;
+           height: 100%;
+           ul{
+               width: 100%;
+               height: 100%;
+               list-style: none;
+               display: flex;
+               justify-content: space-around;
+               margin: 0;
+               padding: 0;
+               margin-top: 10px;
+               li{
+                   width: 100%;
+                   height: 36/$re+rem;
+                   text-align: center;
+                   .iconfont{
+                      font-family:"iconfont" !important;
+                      font-size:16px;font-style:normal;
+                      -webkit-font-smoothing: antialiased;
+                      -webkit-text-stroke-width: 0.2px;
+                      -moz-osx-font-smoothing: grayscale;
+                      color: #CCCCCC;
+                      display: block;
+                      height:16/$re+rem ;
+                    }
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        height: 16/$re+rem;
+                        border-right: 1px solid #CCCCCC;
+                    }
+                    .font{
+                        font-weight:600;
+                    }
+                    .qqq{
+                        border-right: none!important;
+                    }
+
+               }
+           }
+       }
+       .gongge{
+           width: 100%;
+           height: 10/$re+rem;
+           background: #EBEBEB;
+       }
+       .set{
+           width: 100%;
+           height: 100%;
+           margin: 0;
+           padding: 0;
+           ul{
+               width: 100%;
+               height: 100%;
+               margin: 0;
+               padding: 0;
+               list-style: none;
+               li{
+                   width: 100%;
+                   height: 35/$re+rem;
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: wrap;
+                   .iconfont{
+                       width: 15%;
+                       display: block;
+                       text-align: center;
+                       margin: auto;
+                   }
+                   span{
+                       width: 85%;
+                       display: block;
+                       margin: auto;
+                   }
+               }
+               .quit{
+                   display: flex;
+                   justify-content: center;
+                   margin: 0;
+                   padding: 0;
+                    margin: auto;
+                    a{
+                        line-height: 35px;
+                        color: red;
+                    }
+               }
+           }
+       }
+       
+   }
+   
+   
+   .dibu_list1{
+       width: 100%;
+               height: 35/$re+rem;
+               background: red;
+               padding: 0;
+               margin: 0;
+               display: flex;
+               justify-content: space-between;
+               
+             a{
+                 width: 102px;
+                 height: 25px;
+                 color: white;
+                 line-height:35/$re+rem ;
+                 border: 1px solid white;
+                 border-radius: 12px;
+                 text-decoration: none;
+                 margin: auto;
+                 
+                 span{
+                     width: 50px;
+                     display: block;
+                     float: left;
+                     line-height:25/$re+rem ;
+                     text-align: center;
+                 }
+                 span:nth-child(1){
+                     color: red;
+                     height: 23px;
+                     border-radius: 12px;
+                     border: 1px solid white;
+                     background: white;
+                 }
+             }
+            
+               .icon {
+                   width:3em; height: 1.5em;
+                   vertical-align: -0.15em;
+                   fill: currentColor;
+                   overflow: hidden;
+                   margin-top: 7/$re+rem;
+                   color: white;
+                }  
+
+   }
+   .dibu_list{
+       width: 100%;
+       height:35/$re+rem;
+       background:pink;
+       padding: 0;
+       margin: 0;
+       .yiji{
+           width: 100%;
+           height: 100%;
+           list-style: none;
+           padding: 0;
+           margin: 0;
+           li{
+               width: 100%;
+               height: 100%;
+               margin: 0;
+               padding: 0;
+               a{
+                   width: 100%;
+                   height:100%;     
+               }
+               .top{
+                   width: 100%;
+                   height: 100%;
+                   .txt{
+                     width: 100%;
+                     height: 35px;
+                     margin: 0;
+                     padding: 0;  
+                   }
+               }
+               .list{
+                   width: 100%;
+                   height: 100%;
+                   margin: 0;
+                   padding: 0;
+                   list-style: none;
+               }
+           }
+       } 
+   }
+   
+
+ 
