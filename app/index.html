@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript">document.documentElement.style.fontSize=innerWidth/25+'px';</script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script> 		
+		<link rel="stylesheet" href="css/man.css" />
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="css/man.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<script type="text/javascript" src="js/swiper.js" ></script>		
+        <script type="text/javascript" src="fonts/iconfont.js" ></script>
+		<script src="js/angular.js" ></script>
+		<script src="js/angular-ui-router.js" ></script>
+		<script type="text/javascript" src="js/shijian.js" ></script>
+        <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+        <script src="fonts/font/iconfont.js"></script>
+
+		<script>
+			 var app = angular.module("app",["ui.router"]);
+			 app.config(function($stateProvider,$urlRouterProvider){
+			 	 $urlRouterProvider.otherwise('/one')
+			 	  $stateProvider
+			 	  .state({
+			 	  	 name:'one',
+			 	  	 url:"/one",
+			 	  	 templateUrl:"./views/toubu.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'two',
+			 	  	 url:"/two",
+			 	  	 templateUrl:"./views/neirong.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'three',
+			 	  	 url:"/three",
+			 	  	 templateUrl:"./views/dibu.html"
+			 	  })
+			 	   .state({
+			 	  	 name:'dong',
+			 	  	 url:"/dong",
+			 	  	 templateUrl:"./views/tongtai.html"
+			 	  })
+			 })
+			 $('#myModal').modal()                      // 以默认值初始化
+             $('#myModal').modal({ keyboard: false })   // initialized with no keyboard
+             $('#myModal').modal('show')                // 初始化后立即调用 show 方法
+
+		</script>
+	</head>
+	<body style="background: #FFFAFA;">
+		
+		
+<div class="box"style="width: 100%; height: 100%; overflow-y: auto;">
+   
+	    <div class="con">
+	
+	    	<ui-view ></ui-view>
+	    </div>
+	    
+	    <!--状态栏-->
+	    <!--<div class="com">
+	    	<div class="lefts">
+	    		<i class="iconfont">&#xe672;</i><br/>
+	    		<i class="iconfont">&#xe671;</i><br/>
+	    		<i class="iconfont">&#xe68e;</i><br/>
+	    	</div>
+	    	
+	    	<div id="show"></div>
+	    	
+	    	<div class="rights">
+	    		<i class="iconfont">&#xe644;</i><br/>
+	    		<i class="iconfont">&#xe613;</i><br/>
+	    		<a class="iconfont">100%</a><br/>
+	    		<i class="iconfont">&#xe604;</i><br/>
+	    	</div>
+	    </div>
+	    <style type="text/css">
+	    	body{padding-top:19/$re+rem;}
+	    	  .com{
+       width: 100%;
+       height: 18/$re+rem;
+       position: fixed;
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: nowrap;
+       top: 0;
+
+       
+       div{
+           display: flex;
+           width: 33.3%;
+         
+           &:nth-child(2){
+             
+               i{display: block;margin: 0 auto;}
+           }
+           &:nth-child(3){display: flex;justify-content: flex-end;}
+       }
+       #show{
+           
+           justify-content: center;
+           font-size: 12px;
+       }
+       .lefts{
+          
+           i{
+               &:first-child{font-size: 5px;}
+               font-size: 8px;
+               }
+       }
+       .rights{
+           a{
+               font-size: 12px;
+
+           }
+       }
+       
+   } 
+   -->
+   
+	    </style>
+	    
+		<i class="videop"></i>
+		<div class="footer">
+			<ul>
+				<li><i class="iconfont">&#xe611;</i><a href="#!/one">发现音乐</a></li>
+				<li><i class="iconfont">&#xe680;</i><a href="#!/two">我的音乐</a></li>
+				<li><i class="iconfont">&#xe616;</i><a href="#!/three">音乐圈</a></li>
+				<li><i class="iconfont">&#xe6ac;</i><a href="#!/dong">账号</a></li>
+			</ul>
+			
+			
+		</div>
+		
+</div>
+
+	</body>
+</html>

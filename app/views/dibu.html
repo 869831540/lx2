@@ -1,0 +1,131 @@
+
+<div class="dibu_list1">
+	<svg class="icon" aria-hidden="true" style="color: white;">
+        <use xlink:href="#icon-tianjiapengyou1-copy"></use>
+    </svg>
+	<a ><span>动态</span><span>附近</span></a>
+	<svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-yinpin-copy"></use>
+    </svg>
+</div>
+
+<div class="dibu_list">
+		<ul>
+			<li class="inactive"><i class="iconfont">&#xe62b;</i><a>发动态</a></li>				
+			<li><i class="iconfont">&#xe641;</i><a>发视频</a></li>			
+		</ul>
+</div>
+<div class="box1 dibu_box">
+
+	<!--内容发布区域-->
+	<div class="boxcenter">
+		<div class="boxc_t"><h5>世界在倾听你的声音</h5></div>
+		<div class="boxc_c" contenteditable="true" id="aa"></div>
+		<div class="boxc_b"><a>发布</a></div>
+	</div>
+	
+	<!--时光轴线-->
+	<div class="timeline">
+
+		<div class="nextbox" style="overflow-y: auto;"></div>
+	</div>
+	
+</div>
+<script>
+	$(function(){
+	var data = openDatabase('mes','2.0','用户信息','1024*1024');
+	//创建数据库
+	
+//	清除数据库		data.transaction(function(ts){  
+//			ts.executeSql("drop table dt");
+//		})
+	data.transaction(function(ts){
+		ts.executeSql('create table if not exists dt(dt_content,dt_year,dt_month,dt_day,dt_hour,dt_min)');
+	});
+	$(".box1").find(".boxc_b").click(function(){
+		var center = $(".boxc_c").text();//.appendTo("nextbox");
+		if(center==""){
+			alert("请输入内容喔！");
+			return;
+		}
+		var dateDom = new Date();
+		//获取本地时间，年月日时分
+		var year = dateDom.getFullYear();
+		var month = dateDom.getMonth()+1;
+		var day = dateDom.getDate();
+		var hour = dateDom.getHours();
+		var min = dateDom.getMinutes();
+		data.transaction(function(ds){
+			ds.executeSql("insert into dt(dt_content,dt_year,dt_month,dt_day,dt_hour,dt_min) values(?,?,?,?,?,?)",[center,year,month,day,hour,min],function(){
+				var str = $(".nextbox").html();
+					str = "<div class='a'>"+
+						"<div class='b'></div>"+
+						"<p>"+center+"</p>"+
+						"<span id='time'>"+year+"-"+
+						month+"-"+
+						day+"&nbsp;&nbsp;"+
+						"<span id='hour'>"+hour+":"+min+"</span>"+
+						"</span>"+
+						"<br>"+
+						"</div>" + str;
+					$(".nextbox").html(str);
+			},function(){
+				alert("用户已存在")
+			});
+		});
+		$(".boxc_c").text("");	
+	});
+	querySql();
+	function querySql(){
+		$(".nextbox").html("");
+		data.transaction(function(ts){
+			ts.executeSql("select * from dt",[],function(re,data){
+//				console.log(data)
+				$.each(data.rows, function(i,e) {
+//					console.log(e);
+					addText(e);
+//					debugger;
+				});
+			});
+		});
+	}
+	
+	function addText(obj){
+		var str = "";
+		str += "<div class='a'>"+
+			"<div class='b'></div>"+
+			"<p>"+obj.dt_content+"</p>"+
+			"<span id='time'>"+obj.dt_year+"-"+
+			obj.dt_month+"-"+
+			obj.dt_day+"&nbsp;&nbsp;"+
+			"<span id='hour'>"+obj.dt_hour+":"+obj.dt_min+"</span>"+
+			"</span>"+
+			"<br>"+
+			"</div>";
+		$(".nextbox").prepend(str);
+	}
+	
+	$(".boxc_c").keydown(function(event){					
+		var len =$(".boxc_c").text().length;			
+		if(len > 70){
+		alert("够了，你别输入了，哪儿那么多话儿！");					
+		}
+	});
+
+	
+});
+
+
+</script>
+
+
+<script>
+	$(document).ready(function(){
+		$(".boxc_b").click(function(){
+			$(".boxcenter").hide();
+		});
+		$(".inactive").click(function(){
+			$(".boxcenter").show();
+		});
+    });
+</script>
